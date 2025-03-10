@@ -62,6 +62,7 @@ function checkAnswer() {
  * Gets the operands (the numbers) and the operator (plus, minus etc)
  * directly from the dom, and returns the correct answer.
  */
+
 function calculateCorrectAnswer() {
 
     let operand1 = parseInt(document.getElementById('operand1').innerText);
@@ -75,7 +76,7 @@ function calculateCorrectAnswer() {
         throw `Unimplemented operator ${operator}. Aborting!`;
     }
 
-}  
+}
 
 /**
  * Gets the current score from the DOM and increments it by 1
@@ -94,7 +95,7 @@ function incrementWrongAnswer() {
 
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
-    
+
 }
 
 function displayAdditionQuestion(operand1, operand2) {
@@ -102,7 +103,7 @@ function displayAdditionQuestion(operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "+";
-    
+
 }
 
 function displaySubtractQuestion() {
@@ -110,5 +111,5 @@ function displaySubtractQuestion() {
 }
 
 function displayMultiplyQuestion() {
-    
+
 }
